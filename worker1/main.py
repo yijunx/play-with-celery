@@ -10,11 +10,4 @@ def do_it(name: str, hihi: str):
 
 
 if __name__ == "__main__":
-    app.worker_main(
-        argv=[
-            "worker",
-            "--loglevel=info",
-            "--queues",
-            "my-celery-queue1"
-        ]
-    )
+    app.worker_main(argv=["worker", "--loglevel=info", "--queues", "my-celery-queue1"])

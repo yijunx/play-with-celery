@@ -11,5 +11,11 @@ services:
       - ~/etc/timezone:/opt/yijunx/etc/timezone
     command: ["tail -f /dev/null"]
 
+  mock-service:
+    build: 
+      context: ../mock_server
+    ports:
+      - 6784:5000
+
   rabbitmq:
     image: rabbitmq:3-management-alpine

@@ -12,7 +12,7 @@ logger =  logging.getLogger(__name__)
 
 
 @app.route("/", methods=["GET"])
-def get_patient():
+def index():
     httpcode = random.choice([500, 200])
     logger.info(f"http code is {httpcode}")
     return "hello", httpcode
